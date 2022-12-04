@@ -3,18 +3,11 @@ package com.dimatica.hackertest.model;
 import java.time.Duration;
 import java.time.Instant;
 
-import org.springframework.stereotype.Component;
-
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Component
-@AllArgsConstructor
-@NoArgsConstructor
 public class ItemLine {
 	
 	private String ip;
@@ -29,17 +22,6 @@ public class ItemLine {
 		this.action=splitLine[2];
 		this.userName=splitLine[3];	
 	}
-	
-	public ItemLine setItemLine(String line) {
-		String [] splitLine  =line.split(",");
-		this.ip= splitLine[0];
-		this.date =Long.parseLong(splitLine[1]);
-		this.action=splitLine[2];
-		this.userName=splitLine[3];	
-		return this;
-	}
-	
-
 	@Override
 	public boolean equals(Object o) {
         if (this == o)

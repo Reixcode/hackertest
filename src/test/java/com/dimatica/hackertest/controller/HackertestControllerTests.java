@@ -14,6 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 
+
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
 @ExtendWith(SpringExtension.class)
@@ -24,12 +25,11 @@ class HackertestControllerTests {
 	
 	@Autowired
 	private HackertestController controller;
-
-
+	
 	@BeforeEach
     void setup(){
     	MockitoAnnotations.openMocks(this);
- 
+    
     	RestAssuredMockMvc.standaloneSetup(	controller);
     }
 	

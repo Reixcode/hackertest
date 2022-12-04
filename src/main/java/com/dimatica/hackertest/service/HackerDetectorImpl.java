@@ -18,22 +18,12 @@ import com.dimatica.hackertest.model.ItemLine;
 public class HackerDetectorImpl implements HackerDetector{
 	@Autowired
     private HackertestConfig dataApp;
-
-	private ItemLine itemLine;
-	
-	
-	public HackerDetectorImpl(ItemLine itemLine) {
-		this.itemLine = itemLine;
-	}
-	
-	@Override
 	public String parseLine(String line) {
 		
 		Path path = Paths.get("logActivity.txt");
 		
 		Long result =0L;
-		
-		ItemLine inputLine =itemLine.setItemLine(line);
+		ItemLine  inputLine= new ItemLine(line);
 		Stream<String >stream = null;
 		
 		

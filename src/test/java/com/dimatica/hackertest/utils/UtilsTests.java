@@ -1,8 +1,13 @@
 package com.dimatica.hackertest.utils;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
+import javax.mail.internet.*;
+import com.dimatica.hackertest.utils.Utils;
 
 
 class UtilsTests {

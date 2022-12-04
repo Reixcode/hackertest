@@ -18,6 +18,7 @@ import com.dimatica.hackertest.model.ItemLine;
 public class HackerDetectorImpl implements HackerDetector{
 	@Autowired
     private HackertestConfig dataApp;
+	@Override
 	public String parseLine(String line) {
 		
 		Path path = Paths.get("logActivity.txt");
